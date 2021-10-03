@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LogService } from './services/log.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'logger';
+
+  constructor(private logService: LogService){}
+
+
+
+  testLog() {
+    this.logService.debug("Test Mixed Parameters")
+  }
 }
